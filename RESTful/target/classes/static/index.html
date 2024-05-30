@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"></script>
+  <script type = "text/javascript">
+    function show() {
+      $.post("ajax/hello",{},function(result){
+        alert(result);
+      });
+    }
+  </script>
+</head>
+<body>
+<button onclick="show()">Ajax测试按钮</button><br/>
+<a href = "/blog/990232">博客</a><br/>
+<a href = "/blog/query?q=lengdaquan">搜索</a>
+</body>
+</html>
