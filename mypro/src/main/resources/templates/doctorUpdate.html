@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>医生修改</title>
+</head>
+<body>
+<form th:action="'/doctor/update'" th:method="post">
+    <input th:type="hidden" th:name="id" th:value="${doctor.id}"/>
+    姓名: <input th:type="text" th:name="name" th:value="${doctor.name}"/><br/>
+    时间: <input th:type="text" th:name="time" th:value="${doctor.time}"/><br/>
+    科室: <input th:type="text" th:name="department" th:value="${doctor.department}"/><br/>
+    地点: <input th:type="text" th:name="location" th:value="${doctor.location}"/>
+    <br/>
+    <input th:type="submit" th:value="提交"/>
+</form>
+</body>
+</html>

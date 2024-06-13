@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/doctor/list3">预约医生</a><br/>
+<table>
+    <tr>
+        <th>患者电话</th>
+        <th>患者性别</th>
+        <th>医生姓名</th>
+        <th>时间</th>
+        <th>科室</th>
+        <th>地点</th>
+    </tr>
+    <p th:each ="reserve:${reservelist}" >
+        <tr>
+            <td th:text ="${reserve.tel}"></td>
+            <td th:text ="${reserve.sex}"></td>
+            <td th:text ="${reserve.name}"></td>
+            <td th:text ="${reserve.time}"></td>
+            <td th:text ="${reserve.department}"></td>
+            <td th:text ="${reserve.location}"></td>
+            <td>
+        </tr>
+    </p>
+</table>
+</body>
+</html>

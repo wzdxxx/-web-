@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>姓名</th>
+            <th>时间</th>
+            <th>科室</th>
+            <th>地点</th>
+        </tr>
+        <p th:each ="doctor:${doctorlist}" >
+            <tr>
+                <td th:text ="${doctor.name}"></td>
+                <td th:text ="${doctor.time}"></td>
+                <td th:text ="${doctor.department}"></td>
+                <td th:text ="${doctor.location}"></td>
+                <td>
+                    <a th:href="'/reserve/add/'+${doctor.id}">预约</a>
+                </td>
+            </tr>
+        </p>
+    </table>
+</body>
+</html>
